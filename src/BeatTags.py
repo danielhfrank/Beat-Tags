@@ -10,7 +10,7 @@ import os
 import eyeD3
 
 
-TEST = True
+TEST = False
 
         
 class BeatnessExtractor:         
