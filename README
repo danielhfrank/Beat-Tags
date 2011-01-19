@@ -1,0 +1,41 @@
+Beat Tags - 01/18/11
+
+Since I'd rather spend hours writing a program than minutes manually correcting ID3 tags, we now have the BeatTags Python module. If your tags are beat, you can use this through the command line to make changes across an entire album. 
+
+This may already exist, but I want to make sure I would have something to serve my purposes. Currently it attempts to extract information from the title, or the filename if none present. Suggestions welcome
+
+-df
+
+Installation:
+
+You MUST have eyeD3 on your Python path. Help with this step forthcoming.
+
+Usage:
+
+run with --help command line flag to print most current usage instructions, as the code is self-documenting. At time of writing this is what's available:
+
+***
+
+     Here are the command line flags you can use. Also supply directory as final argument, or else current will be assumed
+     -a or --artist ... function to get artist 
+     -A or --album ... function to get album
+     -t or --title ... you get it
+    -C captialize.. the song names. and the artists?
+     
+These are the functions that you can use for artist, track etc: documented by example
+     
+after_dash  Tennis - Marathon --> Marathon
+
+after_slash  Tennis / Marathon --> Marathon
+
+before_dash  Tennis - Marathon --> Tennis
+
+before_slash  Tennis / Marathon --> Tennis
+
+just_fix_it  Used if you just want to get rid of leading 02. or something like that
+
+***
+
+Known Issues:
+
+If you have a bunch of tracks that start with numbers then it will be assumed that these are the track numbers, e.g. 01. I Can't Stand It. IF the track legitimately starts with numbers, after the track number, you will be in trouble on account of programmer laziness.
